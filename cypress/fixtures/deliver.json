@@ -1,0 +1,50 @@
+{
+    "signup": {
+        "name": "Rodrigo Lima",
+        "cpf": "00000014111",
+        "email": "rlima@qaninja.com",
+        "whatsapp": "999999999",
+        "address": {
+            "postalcode": "30810600",
+            "street": "Rua Antônio Pio Cardoso",
+            "number": "222",
+            "details": "Casa",
+            "district": "Paquetá",
+            "city_state": "Belo Horizonte/MG"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "cpf_inv": {
+        "name": "Pedro Coelho",
+        "cpf": "AA000014111",
+        "email": "pcoelho@qaninja.com",
+        "whatsapp": "999999999",
+        "address": {
+            "postalcode": "30810600",
+            "street": "Rua Antônio Pio Cardoso",
+            "number": "222",
+            "details": "Casa",
+            "district": "Paquetá",
+            "city_state": "Belo Horizonte/MG"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+    "email_inv": {
+        "name": "Paula Arruda",
+        "cpf": "00000014111",
+        "email": "paula.arauda.com.br",
+        "whatsapp": "999999999",
+        "address": {
+            "postalcode": "30810600",
+            "street": "Rua Antônio Pio Cardoso",
+            "number": "222",
+            "details": "Casa",
+            "district": "Paquetá",
+            "city_state": "Belo Horizonte/MG"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    }
+}
