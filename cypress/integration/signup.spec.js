@@ -99,7 +99,7 @@ describe('Signup', () => {
         signupPage.go()
         signupPage.fillForm(deliver)
         signupPage.submit()
-        signupPage.alertMessageShoulBe('Oops! Email com formato inválido.')
+        signupPage.alertMessageShoulBe('Oops! Email com formato inválidu.')
 
     })
 
