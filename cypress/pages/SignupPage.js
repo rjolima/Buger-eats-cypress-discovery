@@ -39,17 +39,25 @@ class SignupPage {
         //vai fazer a mesma buscar do xpath, só que mais limpa. 
         //Vai buscar pelo nome informado na metoda_entrega: 'Moto', assim para as outras opções, busca elemento pai, pega dentro da filho as 3 opções li
         // e vai clicar na opção de entrega informada no metodo_entrega, Moto, Bicicleta e Van/Carro
-        cy.contains('.delivery-method li', deliver.delivery_method).click()
+        //cy.contains('.delivery-method li', deliver.delivery_method).click()
 
         // input[accept="image/*"] - para remover /* do nome "imagem/*" usa ^ que é um expressão regular que vai procurar na propriedade accpet o valor q começa com image
         //input[accept$="/*"] - para buscar a parte final do valor do image
         //input[accept*="/*"] - contém dados dentro do elemento do html
+        
+
+    }
+
+    deliverMethod(deliver) {
+        cy.contains('.delivery-method li', deliver.delivery_method).click()
+
         cy.get('input[accept^="image"]').attachFile('/images/' + deliver.cnh)
 
     }
 
     submit() {
         //uso o form para garantir que vai buscar esse elemento dentro dele apenas.
+       
         cy.get('form button[type="submit"]').click()
     }
 
@@ -64,7 +72,13 @@ class SignupPage {
 
     }
 
-    alertMessageShoulBe(expectedMessage){
+    alertMessageShoulBe(expectedMessage) {
+        //cy.get('.alert-error').should('have.text', expectedMessage)
+        //vai combinar o seletor css com o texto com classe trazendo apenas um único elemento, com isso vai buscar todos os campos que são obrigatórios
+        cy.contains('.alert-error', expectedMessage).should('be.visible')
+    }
+
+    alertMessageShoulBeDeliver(expectedMessage) {
         //cy.get('.alert-error').should('have.text', expectedMessage)
         //vai combinar o seletor css com o texto com classe trazendo apenas um único elemento, com isso vai buscar todos os campos que são obrigatórios
         cy.contains('.alert-error', expectedMessage).should('be.visible')
